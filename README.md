@@ -1,4 +1,4 @@
-# Aulas de Algoritimosw e Estrtuturas de Dados
+# Aulas de Algoritimos e Estrtuturas de Dados
 
 Répositório para armazenar os arquivos desenvolvidos nas aulas.
 
@@ -7,4 +7,8 @@ Répositório para armazenar os arquivos desenvolvidos nas aulas.
 - Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
 - 1 º Ano
 
-![ Professor] (http://github.com/darlonv.png)
+```java
+System.out.println ("hello world!");
+```
+
+![ Professor](http://github.com/darlonv.png)
