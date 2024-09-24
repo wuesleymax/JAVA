@@ -6,7 +6,7 @@ public class Aula26 {
     public static void aula() {
         System.out.println("Aula 26 vetores");
 
-        ExCopiarVetores();
+        // ExCopiarVetores();
        
     }
 
@@ -19,10 +19,10 @@ public class Aula26 {
         
        }
 
-       public static void ExCopiarVetores(){
-        int [] v= Vetores.alocarInteiros(10);
-        int [] v_copia= Vetores.copiar(v);
-       }
+    //    public static void ExCopiarVetores(){
+    //     int [] v= Vetores.alocarInteiros(10);
+    //     int [] v_copia= Vetores.copiar(v);
+    //    }
 
        public static void ExSubVetores(){
         int [] n =Vetores.alocarInteiros(0);

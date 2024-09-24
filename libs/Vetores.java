@@ -1,4 +1,5 @@
 package libs;
+import libs.Entrada;
 
 public class Vetores {
     public static int [] alocarInteiros ( int n ){
@@ -27,6 +28,55 @@ public class Vetores {
        
     }
 
+    public static int[] lerInteiros(int n){
+        int [] valores= alocarInteiros(n);
+        int i;
+
+        
+
+        for(i=0; i<n; i++){
+            valores[i]= Entrada.LerInt();
+        }
+
+        
+
+        return valores;
+
+    }
+
+    public static int obterPosicaoInteiro(int[] vetor, int valor_buscar,int pos_inicial){ int i;
+        for( i= pos_inicial; i<vetor.length; i++) {
+            if (vetor[i]== valor_buscar) { return i;
+                
+            }
+            
+        }
+        return -1;
+
+
+
+    }
+
+    public static int [] oberIndice(  int []v, int valor_buscar){
+        int i,j ;
+        int [] indices= new int[0];
+        for( i= 0; i<v.length; i++) {
+            if (v[i]== valor_buscar) { 
+                for(j=0; j<v.length; j++){
+                   
+                        indices[j]=i;
+                        
+                    }
+                }
+                
+            }
+            
+        }
+
+
+
+    }
+
     // public static int[] copiar( int []v ){
 
 
@@ -45,18 +95,18 @@ public class Vetores {
         
     // }
 
-    public static int[] subVetor ( int[] v, int a, int b) {
-        int 
-        if (a < 0) a = 0;
-        if (b > v.length) b = v.length;
-        if (a >= b) return new int[0]; 
+    // public static int[] subVetor ( int[] v, int a, int b) {
+    //     int 
+    //     if (a < 0) a = 0;
+    //     if (b > v.length) b = v.length;
+    //     if (a >= b) return new int[0]; 
 
 
 
             
 
 
-    }
+    // }
 
-    }
+    
 
