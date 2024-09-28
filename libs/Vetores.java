@@ -57,21 +57,21 @@ public class Vetores {
 
     }
 
-    public static int [] oberIndice(  int []v, int valor_buscar){
-        int i,j ;
-        int [] indices= new int[0];
-        for( i= 0; i<v.length; i++) {
-            if (v[i]== valor_buscar) { 
-                for(j=0; j<v.length; j++){
+    // public static int [] oberIndice(  int []v, int valor_buscar){
+    //     int i,j ;
+    //     int [] indices= new int[0];
+    //     for( i= 0; i<v.length; i++) {
+    //         if (v[i]== valor_buscar) { 
+    //             for(j=0; j<v.length; j++){
                    
-                        indices[j]=i;
+    //                     indices[j]=i;
                         
-                    }
-                }
+    //                 }
+    //             }
                 
-            }
+    //         }
             
-        }
+    //     }
 
 
 

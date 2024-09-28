@@ -7,8 +7,9 @@ public class Main{
         Entrada.abrir();
         // Aula20.aula();
         // Aula21.aula();
-        Aula26.aula();
-        Aula27.aula();
+        // Aula26.aula();
+        // Aula27.aula();
+        Aula28.aula();
         Entrada.fechar();
         
     }
