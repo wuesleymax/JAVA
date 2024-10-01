@@ -1,11 +1,11 @@
-package aulas;
-public class Aula28 {
-    public static void aula(){
-        System.out.println("aula28");
-        ex02();
+// package aulas;
+// public class Aula28 {
+//     public static void aula(){
+//         System.out.println("aula28");
+//         ex02();
 
 
-    }
+//     }
 
 // public static void ex02(){
 //     int [][] m ;
@@ -44,16 +44,16 @@ public class Aula28 {
 //         System.out.println();
 //     }
 // }
-public static void ex02(){
-    int [][] m ;
-    int i, j;
-    m= new int [5][5];
-   for (int i = 0; m.length; i++) {
-    m[i][i]=1;
+// public static void ex02(){
+//     int [][] m ;
+//     int i, j;
+//     m= new int [5][5];
+//    for (int i = 0; m.length; i++) {
+//     m[i][i]=1;
             
-}
-}
-}
+// }
+// }
+// }
 
 
 
