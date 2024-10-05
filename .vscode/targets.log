@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Sep 24 19:07:18 2024
+# Make data base, printed on Fri Oct  4 21:07:27 2024
 
 # Variables
 
@@ -30,6 +30,8 @@ WINDOWPATH = 2
 NVM_DIR = /home/aluno/.nvm
 # default
 MAKE_COMMAND := make
+# environment
+APPLICATIONINSIGHTS_CONFIGURATION_CONTENT = {}
 # environment
 QT_ACCESSIBILITY = 1
 # automatic
@@ -93,13 +95,13 @@ MAKEFILE_LIST := Makefile
 # environment
 PT8HOME = /opt/pt
 # environment
-VSCODE_PID = 3570
+VSCODE_PID = 3454
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/brj4040trq:@/tmp/.ICE-unix/2405,unix/brj4040trq:/tmp/.ICE-unix/2405
+SESSION_MANAGER = local/brj4040trq:@/tmp/.ICE-unix/2420,unix/brj4040trq:/tmp/.ICE-unix/2420
 # automatic
 *F = $(notdir $*)
 # environment
@@ -137,7 +139,7 @@ LANGUAGE = pt_BR:pt:en
 # automatic
 ^F = $(notdir $^)
 # environment
-INVOCATION_ID = fa3f59cb90ef477fbdabdaedf97fced0
+INVOCATION_ID = 807169a1a91c443180adbf3396ff9768
 # environment
 USERNAME = aluno
 # environment
@@ -163,7 +165,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := make
 # environment
-SYSTEMD_EXEC_PID = 2430
+SYSTEMD_EXEC_PID = 2442
 # environment
 DISPLAY = :1
 # environment
@@ -173,9 +175,9 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 2020
+MANAGERPID = 2030
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3570
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3454
 # environment
 _ = /usr/share/code/code
 # environment
@@ -183,7 +185,7 @@ XDG_RUNTIME_DIR = /run/user/1001
 # environment
 GPG_AGENT_INFO = /run/user/1001/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:30808
+JOURNAL_STREAM = 8:30792
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -209,7 +211,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = ubuntu
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=3/129=2%
+# Load=100/1024=10%, Rehash=0, Collisions=3/130=2%
 
 # Pattern-specific Variable Values
 
@@ -217,9 +219,9 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 37, inode 3014686): 10 files, no impossibilities.
+# . (device 37, inode 3028884): 16 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -235,7 +237,7 @@ make: build run
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-24 19:07:06.342954575
+#  Last modified 2024-10-04 21:07:10.753667329
 #  File has been updated.
 #  Successfully updated.
 
@@ -243,14 +245,14 @@ clear:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 12):
+#  recipe to execute (from 'Makefile', line 13):
 	rm -r bin/*
 
 git:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 16):
+#  recipe to execute (from 'Makefile', line 17):
 	git config --global user.email "wuesleysoaresmaximiano@gmail.com"
 	git config --global user.name "wuesleymax"
 
@@ -271,17 +273,17 @@ run:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 9):
+#  recipe to execute (from 'Makefile', line 10):
 	 @java -cp bin Main
 
 build:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
  
 make: *** No rule to make target 'all'.  Stop.
 
-#  recipe to execute (from 'Makefile', line 4):
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 5):
 	 javac -d bin Main.java aulas/*.java libs/*.java
 	 #javac -d bin aulas/Aula20.java
 	 #javac -d bin libs/*.java
@@ -295,12 +297,12 @@ make: *** No rule to make target 'all'.  Stop.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 142 B / avg = 7 B
-# current buf: size = 8162 B / used = 142 B / count = 20 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 26 / storage = 206 B / avg = 7 B
+# current buf: size = 8162 B / used = 206 B / count = 26 / avg = 7 B
 
-# strcache performance: lookups = 31 / hit rate = 35%
+# strcache performance: lookups = 37 / hit rate = 29%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=0/31=0%
-# Finished Make data base on Tue Sep 24 19:07:18 2024
+# Load=26/8192=0%, Rehash=0, Collisions=0/37=0%
+# Finished Make data base on Fri Oct  4 21:07:27 2024
 
  
