@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Oct  4 21:07:27 2024
+# Make data base, printed on Fri Oct  4 21:44:36 2024
 
 # Variables
 
@@ -30,8 +32,6 @@ WINDOWPATH = 2
 NVM_DIR = /home/aluno/.nvm
 # default
 MAKE_COMMAND := make
-# environment
-APPLICATIONINSIGHTS_CONFIGURATION_CONTENT = {}
 # environment
 QT_ACCESSIBILITY = 1
 # automatic
@@ -70,8 +70,6 @@ CURDIR := /home/aluno/Área de Trabalho/JAVA
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
-# environment
-VSCODE_L10N_BUNDLE_LOCATION = file:///opt/vscode_extensions/ms-ceintl.vscode-language-pack-pt-br-1.85.2024021409/translations/extensions/vscode.json-language-features.i18n.json
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -177,6 +175,7 @@ MAKE_VERSION := 4.3
 # environment
 MANAGERPID = 2030
 # environment
+ 
 GIO_LAUNCHED_DESKTOP_FILE_PID = 3454
 # environment
 _ = /usr/share/code/code
@@ -211,7 +210,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = ubuntu
 # variable set hash-table stats:
-# Load=100/1024=10%, Rehash=0, Collisions=3/130=2%
+# Load=98/1024=10%, Rehash=0, Collisions=2/128=2%
 
 # Pattern-specific Variable Values
 
@@ -277,9 +276,6 @@ run:
 	 @java -cp bin Main
 
 build:
- 
-make: *** No rule to make target 'all'.  Stop.
-
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -303,6 +299,6 @@ make: *** No rule to make target 'all'.  Stop.
 # strcache performance: lookups = 37 / hit rate = 29%
 # hash-table stats:
 # Load=26/8192=0%, Rehash=0, Collisions=0/37=0%
-# Finished Make data base on Fri Oct  4 21:07:27 2024
+# Finished Make data base on Fri Oct  4 21:44:36 2024
 
  
