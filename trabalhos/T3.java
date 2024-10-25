@@ -34,10 +34,10 @@ public class T3 {
         // Transpor( mat, l1 , c2 );
 
         // PermutacaoLinha(mat, l1, c2 , 0,1);
-        // Multi(mat,l1,c2,mat2,l,c);
+        Multi(mat,l1,c2,mat2,l,c);
         
-
-        int  [] vet = {6,5,4,3};
+        int [] vetorz = {1,1,1,1};
+        int  [] vet = {2,2,2,2};
         boolean [] vetor = {};
         boolean [] vz = {};
     //    mostrarInteiros(  v, 'x');//
@@ -46,7 +46,8 @@ public class T3 {
     //  Intersecao(v, vet);
 
     // Pascal(n);
-    aplicarElogico(vetor, vz);
+    // aplicarElogico(vetor, vz);
+//    Uniao(vetorz, vet);
       
     }
     
@@ -205,63 +206,7 @@ public static void aplicarMascara(int[] v, boolean[] z){
     System.out.println("]");
 }
 
-public static void Uniao(int[] v, int[] z) {
-   
-    int tmaximo = v.length + z.length;
-    int[] x = new int[tmaximo]; 
-
-    
-    int indice = 0;
-    for (int i = 0; i < v.length; i++) {
-        x[indice] = v[i];
-        indice++;
-    }
-
-  
-    for (int i = 0; i < z.length; i++) {
-        int value = z[i];
-        boolean duplo = false;
-
-       
-        for (int j = 0; j < indice; j++) {
-            if (x[j] == value) {
-                duplo = true;
-                break; 
-            }
-        }
-
-       
-        if (!duplo) {
-            x[indice] = value; 
-            indice++;
-        }
-    }
-
-    
-    int[] b = new int[indice];
-    for (int i = 0; i < indice; i++) {
-        b[i] = x[i];
-    }
-
-   
-    System.out.print("[");
-    for (int i = 0; i < b.length; i++) {
-        System.out.print(b[i]);
-        if (i < b.length - 1) {
-            System.out.print(", ");
-        }
-    }
-    System.out.println("]");
-}
-
-public static void uni(int []v, int []z){
-
-
-
-    
-}
-
-
+;
 
 public static void Diferenca(int []v, int []z){
     int i, cont ;
@@ -280,49 +225,6 @@ public static void Diferenca(int []v, int []z){
 
 }
 
-public static void Intersecao(int[] v, int[] z) {
-    int[] x = new int[v.length]; // O vetor temporário será do tamanho de 'v'
-    int cont = 0; // Contador para os elementos comuns
-
-    // Percorrer o vetor v
-    for (int i = 0; i < v.length; i++) {
-        // Para cada elemento de v, verificar se ele está em z
-        for (int j = 0; j < z.length; j++) {
-            if (v[i] == z[j]) { // Se v[i] é igual a z[j], então é um elemento comum
-                boolean jaExiste = false;
-
-                // Verifica se o elemento já foi adicionado à interseção
-                for (int k = 0; k < cont; k++) {
-                    if (x[k] == v[i]) {
-                        jaExiste = true; // Se já existe, não adicionar novamente
-                        break;
-                    }
-                }
-
-                if (!jaExiste) { // Se o elemento ainda não foi adicionado
-                    x[cont] = v[i];
-                    cont++; // Incrementa o contador de elementos comuns
-                }
-            }
-        }
-    }
-
-    // Criar o vetor final com o tamanho exato da interseção
-    int[] y = new int[cont];
-    for (int i = 0; i < cont; i++) {
-        y[i] = x[i]; // Copia os elementos para o vetor final
-    }
-
-    // Exibir o vetor interseção
-    System.out.print("[");
-    for (int i = 0; i < y.length; i++) {
-        System.out.print(y[i]);
-        if (i < y.length - 1) {
-            System.out.print(", ");
-        }
-    }
-    System.out.println("]");
-}
 
 
 public static void Transpor(int[][] m , int l , int c){
