@@ -3,6 +3,7 @@ make: Entering directory '/home/aluno/Área de Trabalho/JAVA'
 javac -d bin Main.java aulas/*.java libs/*.java
 #javac -d bin aulas/Aula20.java
 #javac -d bin libs/*.java
+javac -d bin trabalhos/T3.java
 java -cp bin Main
 make: Leaving directory '/home/aluno/Área de Trabalho/JAVA'
  
