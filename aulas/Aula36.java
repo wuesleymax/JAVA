@@ -1,6 +1,11 @@
 package aulas;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.ListIterator;
 import java.util.Queue;
+import java.util.Set;
 import java.util.Stack;
 
 import libs.Vetores;
@@ -10,14 +15,15 @@ import libs.Tempo;
 
 public class Aula36 {
     public static void aula(){
-        System.out.println(" ## Fila ##");
+        System.out.println(" ## lista ##");
 
-        ex01();
+        ex02();
     }
 
     public static void ex01(){
 
-       LinkedList<Integer> lista = new LinkedList<>();
+    //    LinkedList<Integer> lista = new LinkedList<>();
+       ArrayList<Integer> lista = new ArrayList<>();
        int i;
        int x;
 
@@ -49,27 +55,41 @@ public class Aula36 {
         System.out.println(y);
        }
 
+       System.out.println("---------");
+     
+       for(int y : lista){
+        System.out.printf("[%d] %d\n", lista.indexOf(y),y);
+       }
+
+
+       System.out.println("-------");
+          ListIterator <Integer> l= lista.listIterator();
+
+          while (l.hasNext()) { 
+            System.out.println(l.next());
+            
+          }
       
 
     }
     public static void ex02(){
-        Stack <Integer> pilha = new Stack<>();
-        int x;
+        Set <Integer> conjunto = new HashSet<>();
 
-        pilha.push(15);
-        pilha.push(20);
-        pilha.push(50);
-        pilha.push(-10);
-        pilha.push(18);
+        conjunto.add(10);
+        conjunto.add(20);
+        conjunto.add(30);
+        conjunto.add(40);
 
-
-        while(!pilha.isEmpty()) {
-            x=pilha.pop();
-            System.out.println(x);
+        for ( int y: conjunto){
+            System.out.println(y);
         }
 
-        
+        System.out.printf("Elemento 30 está no conjunto? %b\n", conjunto.contains(30));
+        System.out.printf("Elemento 70 está no conjunto? %b\n", conjunto.contains(70));
 
+        Iterator <Integer> it= conjunto.iterator();
+        System.out.println(it.hashCode());
+        
 
 
     }
