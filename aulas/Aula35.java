@@ -64,39 +64,7 @@ public class Aula35 {
 
     }
 
-    public static void calcularPolonesaReversa(String [] Valores){
   
-        int i;
-        int result;
-
-        for(i=0; i>Valores.length; i++){
-          if (Valores[i]=="+"){
-
-           result =  Valores[i-1] + Valores[i-2];
-
-          }
-
-          if (Valores[i]=="+"){
-
-            result =  Valores[i-1] - Valores[i-2];
- 
-           }
-          
-          
-
-
-
-
-
-        }
-
-
-
-
-
-
-
-    }
 
 
 
