@@ -16,21 +16,18 @@ public class Vetores {
 
         return vetor;
     }
-    public static void mostrar (int []v){
-        int i;
-        System.out.print("[");
-        for (i=0; i<v.length; i++){
-            System.out.print(v[i]+ ", ");
-
-            if(i<v.length-1){
-                System.out.println(", ");
-            }
-           
+ public static void mostrar(int[] v) {
+    System.out.print("[");
+    for (int i = 0; i < v.length; i++) {
+        System.out.print(v[i]);
+        
+        // Adiciona vírgula apenas se não for o último elemento
+        if (i < v.length - 1) {
+            System.out.print(", ");
         }
-        System.out.println("]");
-
-       
     }
+    System.out.println("]");
+}
 
     public static int[] lerInteiros(int n){
         int [] valores= alocarInteiros(n);
@@ -123,6 +120,92 @@ public class Vetores {
 
 
         return -1;
+    }
+    
+    public static void trocar (int []v, int i, int j) {
+     
+      int tmp = v[i];
+      v[i]= v[j];
+      v[j] = tmp;
+
+    }
+
+    public static void ordenarInsertionSort( int []v){
+
+        int i, j;
+        for(i=1; i<v.length; i++){
+            j = i;
+            while(j>0 && v[j] < v[j-1]){
+                trocar (v,j , j-1);
+                j--;
+            }
+            
+        }
+    }
+
+    public static void ordenarSelectionSort( int []v ){
+        int i, j , menor_val, menor_pos;
+        for(i=0; i < v.length-1; i++){
+            menor_val=v[i];
+            menor_pos= i;
+
+            for (j=i+1; j<v.length;j++){
+                if(v[j]< menor_val){
+                    menor_val = v[j];
+                    menor_pos = j ;
+                }public static void mostrar(int[] v) {
+    System.out.print("[");
+    for (int i = 0; i < v.length; i++) {
+        System.out.print(v[i]);
+        
+        // Adiciona vírgula apenas se não for o último elemento
+        if (i < v.length - 1) {
+            System.out.print(", ");
+        }
+    }
+    System.out.println("]");
+}
+            }
+
+            trocar(v,i,menor_pos);
+
+
+        }
+
+
+
+    }
+
+    public static int[] merge (int[] va, int[] vb){
+        int [] vc;
+        vc= new int [va.length + vb.length];
+        int i=0, j=0, k=0;
+
+        while (i<va.length && j< vb.length){
+            if(va[i]<vb[j]) {
+                vc[k] = va[i];
+                i++;
+            } else { vc[k]=vb[j];
+            j++;
+
+            }
+            k++;
+
+        }
+
+            while (i<va.length){
+                vc[k]= va[i]; i++;k++;
+            }
+            while (j<vb.length){
+                vc[k] = vb[j]; j++;k++;
+            }
+
+            return vc;
+
+
+
+
+
     }
 
     // public static int [] oberIndice(  int []v, int valor_buscar){
