@@ -153,18 +153,11 @@ public class Vetores {
                 if(v[j]< menor_val){
                     menor_val = v[j];
                     menor_pos = j ;
-                }public static void mostrar(int[] v) {
-    System.out.print("[");
-    for (int i = 0; i < v.length; i++) {
-        System.out.print(v[i]);
-        
-        // Adiciona vírgula apenas se não for o último elemento
-        if (i < v.length - 1) {
-            System.out.print(", ");
-        }
-    }
-    System.out.println("]");
-}
+                }
+                
+    
+
+
             }
 
             trocar(v,i,menor_pos);
@@ -175,6 +168,11 @@ public class Vetores {
 
 
     }
+
+    
+
+    // desvantagem  divisoes tem que fazer copia do vetor; precisa de um vetor auxiliar, alocar um vetor demora tempo
+     //
 
     public static int[] merge (int[] va, int[] vb){
         int [] vc;
@@ -207,6 +205,88 @@ public class Vetores {
 
 
     }
+
+
+    public static int [] subVetor(int[]v, int ini, int fim){
+        int i, k=0; 
+        int[] sub_vetor= new int [fim-ini];
+        for(i=ini; i<fim; i++){
+            sub_vetor[k]= v[i];
+            k++;
+        }
+
+        return  sub_vetor;
+    }
+
+    public static int[] mergeSort (int [] v){
+
+        int[]ve_ordenado, vd_ordenado, v_ordenado;
+        if(v.length<= 1) {
+            return v;
+            
+        }
+
+        int [] v_esq, v_dir;
+        int meio;
+        meio = v.length/2;
+        v_esq = subVetor(v, 0, meio);
+        v_dir = subVetor(v, meio, v.length);
+
+       ve_ordenado= mergeSort(v_esq);
+       vd_ordenado = mergeSort(v_dir);
+
+       v_ordenado = merge(ve_ordenado, vd_ordenado);
+       
+    
+        return v_ordenado;
+
+    }
+
+    public static int  quickSort(int[] v, int ini, int fim) {
+       int pivot= v[fim];
+       int pos_menores= ini-1;
+
+       for(int i= ini ; i<fim; i++){
+        if(v[i]<=pivot){
+            pos_menores ++;
+            trocar(v, pos_menores, i);
+        }
+
+
+       }
+
+       pos_menores ++;
+       trocar(v, pos_menores, fim);
+       return pos_menores;
+
+    }
+
+
+    public static void quickS(int []v){
+        quickSortRec(v, 0, v.length-1);
+    }
+
+    public static void quickSortRec(int [] v, int ini , int fim){
+
+        if(fim-ini>1){
+
+        int pos_pivot= quickSort(v, ini, fim);
+        quickSortRec(v, ini, pos_pivot-1);
+        quickSortRec(v, pos_pivot+1, fim);
+
+        }
+
+    }
+    // public static int[] mergeSort (int [] v){
+
+    //     if(v.length<=1){
+    //         return v;
+    //     }
+
+    //     return merge(mergeSort(subVetor(v,0,v.length/2)), mergeSort(subVetor(v,v.length/2,v.length)));
+    // }
+
+  
 
     // public static int [] oberIndice(  int []v, int valor_buscar){
     //     int i,j ;
