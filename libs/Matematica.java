@@ -20,6 +20,31 @@ public static int maior ( int a, int b){
     return b;
 }
 
+public static int potencia ( int x , int y)
+{
+    int i;
+    int k =x ;
+
+    if (y==0) { return 1;
+        
+    }
+    for(i=1; i<y; i++){
+        k=k*x;
+    }
+
+    return k;
+
+    
+}
+
+
+public static int obterValorPos(int x, int k ){
+
+    return   (x % Matematica.potencia(10, k))/ Matematica.potencia(10, k-1);
+
+
+ }
+
 
 
 

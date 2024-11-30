@@ -277,6 +277,79 @@ public class Vetores {
         }
 
     }
+
+
+    public static int [] CountingSort(int []v){
+        int [] contadores = new int[10];
+        int [] contadores_acumulado = new int[10];
+        int [] resultado = new int[v.length];
+
+        int i;
+        for(i=0; i<v.length; i++){
+
+            contadores[v[i]] ++;
+          }
+
+        for (i=1; i<contadores.length; i++){
+            contadores_acumulado[i]= contadores[i-1] + contadores_acumulado[i-1];
+
+        }
+
+        for (i=0; i<v.length; i++){
+            resultado[contadores_acumulado[v[i]]] = v[i];
+            contadores_acumulado[v[i]]++;
+        }
+
+
+        return resultado;
+    }
+
+    public static int [] CountingSort(int []v, int k){
+
+        int [] contadores = new int[10];
+        int [] contadores_acumulado = new int[10];
+        int [] resultado = new int[v.length];
+
+        int i,p;
+        for(i=0; i<v.length; i++){
+            p= Matematica.obterValorPos(v[i], k);
+
+            contadores[p] ++;
+          }
+
+        for (i=1; i<contadores.length; i++){
+            contadores_acumulado[i]= contadores[i-1] + contadores_acumulado[i-1];
+
+        }
+
+        for (i=0; i<v.length; i++){
+            p= Matematica.obterValorPos(v[i], k);
+            resultado[contadores_acumulado[p] ++]= v[i];
+            contadores_acumulado[p]++;
+        }
+
+
+        return resultado;
+    }
+
+
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
     // public static int[] mergeSort (int [] v){
 
     //     if(v.length<=1){

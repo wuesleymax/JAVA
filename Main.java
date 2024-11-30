@@ -1,5 +1,7 @@
 import aulas.*;
 import libs.Entrada;
+import libs.Matematica;
+import libs.Vetores;
 import trabalhos.T3;
 
 
@@ -12,8 +14,14 @@ public class Main{
         // Aula26.aula();
         // Aula27.aula();
         // Aula30.aula();
-        Aula39.aula();
+        Aula40.aula();
+        System.out.println(Matematica.obterValorPos(129, 1));
+        System.out.println(Matematica.obterValorPos(129, 2));
+        System.out.println(Matematica.obterValorPos(129, 3));
+        System.out.println(Matematica.obterValorPos(129, 4));
+        ;
         // T3.trabalho();
+        // vantagem do counting sort nao necessita de um for dentro do outro, nao serve para numeros flutuante com virgula
         Entrada.fechar();
         
     }
