@@ -297,7 +297,7 @@ public class Vetores {
 
         for (i=0; i<v.length; i++){
             resultado[contadores_acumulado[v[i]]] = v[i];
-            contadores_acumulado[v[i]]++;
+            // contadores_acumulado[v[i]]++;
         }
 
 
@@ -324,8 +324,8 @@ public class Vetores {
 
         for (i=0; i<v.length; i++){
             p= Matematica.obterValorPos(v[i], k);
-            resultado[contadores_acumulado[p] ++]= v[i];
-            contadores_acumulado[p]++;
+            resultado[contadores_acumulado[p]++]= v[i];
+            // contadores_acumulado[p]++;
         }
 
 
@@ -333,6 +333,37 @@ public class Vetores {
     }
 
 
+    public static int maior (int []v ){
+        int maior_valor= v[0];
+        int i;
+        for(i=1; i<v.length; i++){
+            if(v[i]>maior_valor){
+                maior_valor=v[i];
+            }
+        }
+
+        return maior_valor;
+    }
+
+    public static int [] radixSort(int []v){
+
+        int maior_valor= Vetores.maior(v);
+        int k=1;
+        while (maior_valor>Matematica.potencia(10, k)){
+            k++;
+
+            System.out.println("saida");
+        }
+
+        for(int i=1; i<=k; i++){
+            v = CountingSort(v, i);
+        }
+      
+        return v;
+
+
+
+    }
 
    
    
