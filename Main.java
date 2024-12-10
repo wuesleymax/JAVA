@@ -3,6 +3,7 @@ import libs.Entrada;
 import libs.Matematica;
 import libs.Vetores;
 import trabalhos.T3;
+import trabalhos.T4;
 
 
 public class Main{
@@ -14,7 +15,7 @@ public class Main{
         // Aula26.aula();
         // Aula27.aula();
         // Aula30.aula();
-        Aula41.aula();
+        T4.aula();
         // System.out.println(Matematica.obterValorPos(129, 1));
         // System.out.println(Matematica.obterValorPos(129, 2));
         // System.out.println(Matematica.obterValorPos(129, 3));

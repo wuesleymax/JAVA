@@ -130,6 +130,35 @@ public class Vetores {
 
     }
 
+    public static void bubbleSort(int[] v) {
+        int n = v.length;
+
+        
+        for (int i = 0; i < n - 1; i++) {
+          
+            boolean trocou = false;
+
+           
+            for (int j = 0; j < n - i - 1; j++) {
+                
+                if (v[j] > v[j + 1]) {
+                  
+                    int temp = v[j];
+                    v[j] = v[j + 1];
+                    v[j + 1] = temp;
+
+                 
+                    trocou = true;
+                }
+            }
+
+        
+            if (!trocou) {
+                break;
+            }
+        }
+    }
+
     public static void ordenarInsertionSort( int []v){
 
         int i, j;
@@ -352,7 +381,7 @@ public class Vetores {
         while (maior_valor>Matematica.potencia(10, k)){
             k++;
 
-            System.out.println("saida");
+            
         }
 
         for(int i=1; i<=k; i++){
