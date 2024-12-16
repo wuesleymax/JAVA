@@ -77,7 +77,7 @@ public class T4 {
         
         // Medir o tempo de execução da ordenação (Insertion Sort)
         long tempo_inicio_ordenacao = Tempo.medirTempoIniciar();
-        Vetores.CountingSort(v,4); // Chama a função de ordenação
+        Vetores.CountingSort(v ,1); // Chama a função de ordenação
         double tempo_ordenacao_segundos = Tempo.medirTempoFinalizarSegundos(tempo_inicio_ordenacao);
     
         // Exibir o tempo de execução da ordenação
